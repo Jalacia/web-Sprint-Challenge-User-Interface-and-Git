@@ -1,0 +1,351 @@
+1. If you were to describe semantic HTML to the next cohort of students, what would you say?
+
+ Semantic HTML describes content so that it makes sense to both the browser and the developer.
+ It is important for SEO and for making your HTML easier for other people who need to access it and make changes.
+
+ 2. Name two big differences between ```display: block;``` and ```display: inline;```.
+
+ Display block like a <p> tag will take up its own line and will take up the whole width, while display inline 
+ and element as an inline element and height and width properties will not have any effect.
+
+ 3. What are the 4 areas of the box model?
+
+ Padding, content, margin, & border.
+
+ 4. While using flexbox, what axis does the following property work on: ```align-items: center```?
+
+ cross axis.
+
+ 5. Explain why git is valuable to a team of developers.
+
+Easier to debug if there are any mistakes in the code. Provides backup of project.
+
+
+
+
+<link rel="stylesheet" href="css/index.css">
+
+ </head>
+
+ <header>
+   <h1><img src="img/lambda-black.png"></h1>
+   <a href="index.html">Home</a>
+   <a href="about.html">About</a>
+   <a href=#>Products</a>
+   <a href="#">Blog</a>
+   <a href="#">Contact</a>
+ </header>
+
+ <img class="head-img" src="img/jumbo-about.png" alt="">
+ <body>
+     <div class="container about-page">
+
+     About
+
+     Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+
+
+     <img src="img/about-plan.png" alt="strategy">
+
+     Strategy
+       <section class="top-content2">
+         <div class="text-container2">
+           <h2>About</h2>
+           <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+       </section>
+    <section id="middle-content2" class="middle-content">
+   <div class="boxes">
+     <div class="box2">
+  <img src="img/about-plan.png" alt="strategy">     
+ <h2>Strategy</h2>
+     <p>Iterative approaches to corporate strategy foster<br>collaborative thinking to further the overall value<br>proposition.</p>
+     <a class="button" href="#">Learn More</a>
+ </div>
+ <div class="box2">
+
+     Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+     Learn More
+
+
+
+     <img src="img/about-working.png" alt="strategy">
+     <h2>How We Work</h2>
+     <p>Iterative approaches to corporate strategy foster<br>collaborative thinking to further the overall value<br>proposition.</p>
+     <a class="button" href="#">Learn More</a>
+ </div>
+
+     How We Work
+
+     Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+     Learn More
+
+
+
+ <div class="box2">
+     <img src="img/about-office.png" alt="strategy">
+
+     Places We Work
+
+     Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+     Learn More
+
+    <h2> Places We Work</h2>
+    <p>Iterative approaches to corporate strategy foster<br>collaborative thinking to further the overall value<br>proposition.</p>
+    <a class="button" href="#">Learn More</a>
+ </div>
+ <div class="box2">
+     <img src="img/about-meeting.png" alt="strategy">
+
+     Collaboration
+     
+     Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+     Learn More
+
+     Let's Work Together
+
+     Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+         
+       <footer>
+    <h2>Collaboration</h2> 
+    <p>Iterative approaches to corporate strategy foster<br>collaborative thinking to further the overall value<br>proposition.</p>
+    <a class="button" href="#">Learn More</a>
+   </div>
+ </div>
+ </section>     
+   <div class="bottom-content2">
+     <h2>Let's Work Together</h2>
+     <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+   </div> 
+      <footer>
+         <nav>
+           <a href="index.html">Home</a>
+           <a href="#">About</a>
+    126  css/index.css 
+Viewed
+
+ @@ -66,6 +66,33 @@ p {
+     line-height: 1.4;
+ }
+
+
+ header{
+     display: flex;
+     justify-content: space-evenly;
+     width: 60%;
+     margin: 0 auto;
+     margin-top: 30px;
+ }
+
+ header a{
+     text-decoration: none;
+     color: black;
+     margin-top: 1.5rem;
+     font-size: 14px;
+     padding-left: 2.7rem;
+     padding-right: 2.7rem;
+ }
+
+ .head-img{
+     display: block;
+     margin-left: 20%;
+     margin-right: 20%;
+     margin-top: 20px;
+     margin-bottom: 30px;
+     width: 60%;
+ }
+
+ .container {
+     width: 800px;
+     margin: 0 auto;
+ @@ -78,6 +105,22 @@ p {
+     margin-bottom: 20px;
+     border-bottom: 1px dashed black;
+ }
+ .top-content2 {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-bottom: 10px;
+     border-bottom: 1px dashed black;
+ }
+
+ .top-content2 .text-container2{
+     margin-left: 20px;
+     margin-bottom: 40px;
+ }
+
+ .box2 h2{
+     margin-top: 15px;
+ }
+
+ .top-content .text-container {
+     width: 48%;
+ @@ -90,28 +133,99 @@ p {
+     border-bottom: 1px dashed black;
+ }
+
+ .middle-content h2 {
+ .middle-content2 {
+     margin-bottom: 20px;
+ }
+
+ #middle-content2{
+     border-bottom: none;
+ }
+
+ /* .middle-content h2 {
+     padding: 0 2%;
+     margin-bottom: 0;
+ }
+ } */
+
+ .middle-content .boxes {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+ }
+
+ .middle-content2 .boxes2{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     width: 12.5%;
+     flex-basis: 100px;
+ }
+
+ #middle-content2 .boxes .box2{
+     border-bottom: 1px dashed black;
+     margin-top: 4px;
+     margin-bottom: 4px;
+ }
+
+ .box2 p{
+     margin-bottom: 20px;
+ }
+
+ .button {
+     border: solid black 2px;
+     color: black;
+     padding: 10px;
+     padding-left: 20px;
+     padding-right: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     border-radius: 12px;
+     margin-bottom: 20px;
+ }
+
+ .middle-content .boxes .box {
+     width: 12.5%;
+     height: 100px;
+     background: black;
+     margin: 20px 2.5%;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #box1{
+     background-color: teal;
+ }
+ #box2{
+     background-color:gold;
+ }
+ #box3{
+     background-color: cadetblue;
+ }
+ #box4{
+     background-color: coral;
+ }
+ #box5{
+     background-color: crimson;
+ }
+ #box6{
+     background-color: forestgreen;
+ }
+ #box7{
+     background-color: darkorchid;
+ }
+ #box8{
+     background-color: hotpink;
+ }
+ #box9{
+     background-color: indigo;
+ }
+ #box10{
+     background-color: dodgerblue;
+ }
+
+ .bottom-content {
+     display: flex;
+     margin: 0 2% 20px;
+ @@ -126,6 +240,12 @@ p {
+     padding-right: 0;
+ }
+
+ .bottom-content2{
+     margin-top: 40px;
+     margin-left: 20px;
+     margin-bottom: 40px;
+ }
+
+ footer {
+     width: 100%;
+     background: black;
+    31  index.html 
+Viewed
+
+ @@ -10,7 +10,16 @@
+   <link rel="stylesheet" href="css/index.css">
+
+ </head>
+
+ <header>
+     <h1><img src="img/lambda-black.png"></h1>
+     <a href="index.html">Home</a>
+     <a href="about.html">About</a>
+     <a href=#>Products</a>
+     <a href="#">Blog</a>
+     <a href="#">Contact</a>
+
+ </header>
+ <img class="head-img" src="img/jumbo.jpg" alt="">
+ <body>
+     <div class="container">
+
+ @@ -30,16 +39,16 @@ <h2>The Past</h2>
+             <h2>Why Did It Have To Be Boxes...</h2>
+
+             <div class="boxes">
+                 <div class="box">Box 1</div>
+                 <div class="box">Box 2</div>
+                 <div class="box">Box 3</div>
+                 <div class="box">Box 4</div>
+                 <div class="box">Box 5</div>
+                 <div class="box">Box 6</div>
+                 <div class="box">Box 7</div>
+                 <div class="box">Box 8</div>
+                 <div class="box">Box 9</div>
+                 <div class="box">Box 10</div>
+                 <div id="box1" class="box">Box 1</div>
+                 <div id="box2" class="box">Box 2</div>
+                 <div id="box3" class="box">Box 3</div>
+                 <div id="box4" class="box">Box 4</div>
+                 <div id="box5" class="box">Box 5</div>
+                 <div id="box6" class="box">Box 6</div>
+                 <div id="box7" class="box">Box 7</div>
+                 <div id="box8" class="box">Box 8</div>
+                 <div id="box9" class="box">Box 9</div>
+                 <div id="box10" class="box">Box 10</div>
+             </div>
+
+         </section>
